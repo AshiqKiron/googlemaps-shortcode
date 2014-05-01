@@ -37,10 +37,10 @@ add_shortcode('map', 'google_maps_shortcode');
 
 
 // create custom plugin settings menu
-add_action('admin_menu', 'baw_create_menu');
-function baw_create_menu() {
+add_action('admin_menu', 'gmsc_create_menu');
+function gmsc_create_menu() {
 	//create new top-level menu
-	add_menu_page('Google Maps ShortCode Plugin Settings', 'GMSC Settings', 'administrator', __FILE__, 'baw_settings_page',plugins_url('/images/key.png', __FILE__));
+	add_menu_page('Google Maps ShortCode Plugin Settings', 'GMSC Settings', 'administrator', __FILE__, 'gmsc_settings_page',plugins_url('/images/key.png', __FILE__));
 
 	//call register settings function
 	add_action( 'admin_init', 'register_gmsc_api_key' );
@@ -52,7 +52,7 @@ function register_gmsc_api_key() {
 	register_setting( 'gmsc-settings-group', 'gmsc_api_key' );
 }
 
-function baw_settings_page() {
+function gmsc_settings_page() {
 ?>
 <div class="wrap">
 
