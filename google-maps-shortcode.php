@@ -14,7 +14,6 @@ function google_maps_shortcode($atts) {
         'loc' => '新宿区戸山一丁目',
         'width' => 445,
         'height' => 364,
-        'rwidth' => 0,
     ), $atts));
     
     $key = get_option('gmsc_api_key');
